@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio | MSOLID TECH SOLUTIONS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&amp;family=Inter:wght@400..700&amp;family=JetBrains+Mono:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/MSOLIDLOGO.jpeg') }}">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004e5a",
+                        "on-secondary": "#1d00a5",
+                        "cyber-cyan": "#06B6D4",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#a2eeff",
+                        "on-background": "#dae2fd",
+                        "surface-container": "#171f33",
+                        "glass-stroke": "rgba(255, 255, 255, 0.1)",
+                        "primary-container": "#29a195",
+                        "surface-variant": "#2d3449",
+                        "secondary-container": "#3626ce",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "surface-bright": "#31394d",
+                        "background": "#0b1326",
+                        "on-secondary-container": "#b3b1ff",
+                        "outline": "#879391",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#00363e",
+                        "inverse-primary": "#006a61",
+                        "on-tertiary-container": "#002f36",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#0f0069",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-surface": "#dae2fd",
+                        "surface-dim": "#0b1326",
+                        "tertiary-container": "#009fb4",
+                        "on-primary-fixed": "#00201d",
+                        "surface-container-low": "#131b2e",
+                        "primary-fixed": "#89f5e7",
+                        "on-surface-variant": "#bcc9c6",
+                        "surface-container-lowest": "#060e20",
+                        "on-tertiary-fixed": "#001f25",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "tertiary-fixed-dim": "#2fd9f4",
+                        "on-primary": "#003732",
+                        "outline-variant": "#3d4947",
+                        "surface": "#0b1326",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "secondary": "#c3c0ff",
+                        "inverse-surface": "#dae2fd",
+                        "surface-container-highest": "#2d3449",
+                        "indigo-glow": "#6366F1",
+                        "professional-blue": "#1E293B",
+                        "surface-container-high": "#222a3d",
+                        "on-error": "#690005",
+                        "deep-teal": "#0F766E",
+                        "secondary-fixed": "#e2dfff",
+                        "inverse-on-surface": "#283044",
+                        "surface-tint": "#6bd8cb",
+                        "on-primary-container": "#00302b",
+                        "tertiary": "#2fd9f4",
+                        "primary": "#6bd8cb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "max-width": "1440px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Geist"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .bento-card {
+            background: linear-gradient(145deg, rgba(23, 31, 51, 0.6) 0%, rgba(11, 19, 38, 0.8) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .bento-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(107, 216, 203, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(107, 216, 203, 0.1);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #0F766E, #06B6D4);
+            color: white;
+            border-color: transparent;
+        }
+
+        .project-item {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .project-item.hidden-item {
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+            position: absolute;
+        }
+        
+        .glass-nav {
+            background: rgba(11, 19, 38, 0.8);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="hidden md:flex flex-col justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop h-20 fixed top-0 w-full z-50 shadow-sm border-b border-glass-stroke bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full h-full">
+<div class="font-headline-lg text-headline-lg-mobile font-bold tracking-tighter text-primary dark:text-primary-fixed">MSOLID TECH SOLUTIONS</div>
+<div class="flex items-center gap-8">
+<ul class="flex gap-6 font-body-md text-body-md">
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95" href="{{url_for('home')}}">Home</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95" href="{{url_for('About')}}">About</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95" href="{{url_for('Service')}}">Services</a></li>
+<li><a class="text-primary dark:text-tertiary font-bold border-b-2 border-primary cursor-pointer active:scale-95" href="{{url_for('Portfolio')}}">Portfolio</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95" href="{{url_for('contact')}}">Contact</a></li>
+</ul>
+<button class="hover:bg-white/5 transition-all duration-300 rounded-full p-2 text-primary dark:text-primary-fixed cursor-pointer active:scale-95">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<nav class="flex flex-col h-full p-unit fixed inset-y-0 left-0 w-64 transform -translate-x-full md:hidden border-r border-outline-variant shadow-xl bg-surface dark:bg-surface-container-high z-50" id="mobile-nav">
+<div class="flex items-center justify-between p-4 mb-8">
+<div>
+<h1 class="font-headline-lg-mobile text-primary">MSOLID TECH</h1>
+<p class="text-xs text-on-surface-variant">Solutions for Tomorrow</p>
+</div>
+<button class="text-on-surface" id="close-nav"><span class="material-symbols-outlined">close</span></button>
+</div>
+<ul class="flex flex-col gap-2 font-label-sm text-label-sm">
+<li><a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-300 ease-in-out rounded-lg" href="{{url_for('home')}}"><span class="material-symbols-outlined">home</span>Home</a></li>
+<li><a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-300 ease-in-out rounded-lg" href="{{url_for('About')}}"><span class="material-symbols-outlined">info</span>About</a></li>
+<li><a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-300 ease-in-out rounded-lg" href="{{url_for('Service')}}"><span class="material-symbols-outlined">settings_suggest</span>Services</a></li>
+<li><a class="bg-primary-container text-on-primary-container rounded-lg px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-300 ease-in-out" href="{{url_for('Portfolio')}}"><span class="material-symbols-outlined">work</span>Portfolio</a></li>
+<li><a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-transform duration-300 ease-in-out rounded-lg" href="{{url_for('contact')}}"><span class="material-symbols-outlined">mail</span>Contact</a></li>
+</ul>
+<div class="mt-auto p-4">
+<button class="w-full py-3 rounded-lg bg-gradient-to-r from-indigo-glow to-cyber-cyan text-white font-medium hover:opacity-90 transition-opacity">Get Started</button>
+</div>
+</nav>
+<!-- Mobile Header -->
+<header class="md:hidden flex justify-between items-center p-margin-mobile glass-nav fixed top-0 w-full z-40">
+<div class="font-headline-lg-mobile text-primary font-bold">MSOLID</div>
+<button class="text-primary" id="open-nav"><span class="material-symbols-outlined">menu</span></button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 md:pt-32 pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-16 text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg text-primary mb-6">Our Innovations</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10">Explore our portfolio of cutting-edge solutions designed to transform industries through AI, advanced management systems, and robust cybersecurity.</p>
+<!-- Filters -->
+<div class="flex flex-wrap justify-center gap-4 filter-container">
+<button class="filter-btn active px-6 py-2 rounded-full border border-outline-variant text-sm font-medium transition-colors hover:border-primary text-on-surface" data-filter="all">All Projects</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant text-sm font-medium transition-colors hover:border-primary text-on-surface" data-filter="ai">AI &amp; ML</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant text-sm font-medium transition-colors hover:border-primary text-on-surface" data-filter="management">Management Systems</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant text-sm font-medium transition-colors hover:border-primary text-on-surface" data-filter="security">Security</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant text-sm font-medium transition-colors hover:border-primary text-on-surface" data-filter="ecommerce">E-Commerce</button>
+</div>
+</div>
+<!-- Portfolio Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter relative min-h-[600px]" id="portfolio-grid">
+<!-- AI Chatbot -->
+<div class="bento-card rounded-xl overflow-hidden flex flex-col project-item" data-category="ai">
+<div class="h-48 w-full relative overflow-hidden bg-surface-container-high">
+<img alt="AI Chatbot Project" class="w-full h-full object-cover opacity-80 mix-blend-screen transition-transform duration-700 hover:scale-105" data-alt="A sleek, modern interface of an advanced AI chatbot on a dark background, featuring glowing neon cyan and indigo accents, holographic text elements, and a futuristic, sophisticated layout. The aesthetic is cutting-edge and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNMiwS6Ww-O7F7hH_W1HhjD6_io7G3rswwlGKvcdD1ZYzq_1RVL7D5fFOsLhkNyyPS5sFG_h7SVBrcr84CJXHLhpvFXsBM1fbOzmKGV33coY5BYsQIOEGj3Zzjix5xXqjdnVT1VCwgtoDbpB0EWRuSih96Tla7P5ZFQvT9xZmLWJQTQazKVFnSzCvNnDOToftMYOPbU35eDGB0f0sWIwvlxpZrqtt9vmdf9u1tbJG1EEaLbeQChQ-a"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h3 class="text-xl font-headline-lg font-semibold text-inverse-surface mb-2">Cognitive AI Chatbot</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Advanced natural language processing engine designed for enterprise customer support, capable of context-aware multi-turn conversations.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">Python</span>
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">TensorFlow</span>
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">React</span>
+</div>
+<button onclick="window.location.href='{{url_for('contact')}}'" class="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary/10 transition-colors font-medium flex justify-center items-center gap-2">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Hospital Management -->
+<div class="bento-card rounded-xl overflow-hidden flex flex-col project-item" data-category="management">
+<div class="h-48 w-full relative overflow-hidden bg-surface-container-high">
+<img alt="Hospital Management System" class="w-full h-full object-cover opacity-80 mix-blend-screen transition-transform duration-700 hover:scale-105" data-alt="A sophisticated dashboard interface for a hospital management system on a dark background. Displays patient metrics, staff schedules, and resource allocation using clean data visualizations in cyber-cyan and teal. High-end, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbQIc279trUz0efmJZZp4SwnERlW7nemz5lWqRBzeCcSKiZdg5vITCJi8Hz4MRhSYbgsja_MullXltR9woMuSQw_3-_UwBxbnrlVpXe36iB2apP3smQyiJY-Yu4E4zL1Y_PUErrbm8rn-lhI8S2-aMQgdZ1N7cJzPsEMTLPb9fQLesT22KxXsAFZ58tBiU4VBbCWyMzvxX4vFQGjrpmDdkeQGjsDYc44B5kI915cY5y8pYzbynovhX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h3 class="text-xl font-headline-lg font-semibold text-inverse-surface mb-2">MedSync Hospital ERP</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Comprehensive management system integrating patient records, inventory tracking, and staff scheduling into a secure, unified platform.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">Django</span>
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">PostgreSQL</span>
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">Vue.js</span>
+</div>
+<button onclick="window.location.href='{{url_for('contact')}}'" " class="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary/10 transition-colors font-medium flex justify-center items-center gap-2">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Face Recognition -->
+<div class="bento-card rounded-xl overflow-hidden flex flex-col project-item md:col-span-2 lg:col-span-1" data-category="ai security">
+<div class="h-48 w-full relative overflow-hidden bg-surface-container-high">
+<img alt="Face Recognition System" class="w-full h-full object-cover opacity-80 mix-blend-screen transition-transform duration-700 hover:scale-105" data-alt="A dark, high-tech visual representation of facial recognition software. Abstract biometric mapping lines over a glowing silhouette in neon blue and indigo hues. Conveys advanced AI security and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7S3bUTgWkIJGHYOax3KBMGauUMC0fkIQ-1jfrlqfcpT71nZ-Q3FRmS1Y36UZo5NUBk_-whCKgG6aPbAPBVp1iN2FWnDveqRUjjGPPqhXVhmpHNApPvDPCWn8WlRp0Lc1DIyxhphILyqCbxphbImcBXtrXsj6GcmFOgrWTP0uaIAeemDYSdXVQuLRTQYH8HWkdLDpuOa4mBnICfgXw_Q-R0Y652yccSpP5epw59vtB6yXy0Tk_f1EH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<h3 class="text-xl font-headline-lg font-semibold text-inverse-surface mb-2">BioScan Access Control</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">High-accuracy facial recognition system for secure facility access, featuring anti-spoofing technology and real-time processing.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">OpenCV</span>
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">PyTorch</span>
+<span class="px-3 py-1 rounded-full bg-surface-bright text-xs text-primary-fixed font-label-sm border border-glass-stroke">C++</span>
+</div>
+<button onclick="window.location.href='{{url_for('contact')}}'" class="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary/10 transition-colors font-medium flex justify-center items-center gap-2">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant flat">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-max-width mx-auto py-margin-desktop px-margin-mobile md:px-margin-desktop">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-lg text-primary font-bold mb-4">MSOLID TECH SOLUTIONS</div>
+<p class="text-on-surface-variant text-sm max-w-md">Building secure, sophisticated, and innovative technology solutions for tomorrow's enterprises.</p>
+</div>
+<div>
+<h4 class="font-medium text-inverse-surface mb-4">Quick Links</h4>
+<ul class="space-y-2 text-sm font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('Service')}}">Our Services</a></li>
+<li><a class="text-primary font-medium hover:underline decoration-primary" href="{{url_for('Portfolio')}}">Portfolio</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('contact')}}">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-medium text-inverse-surface mb-4">Legal</h4>
+<ul class="space-y-2 text-sm font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('privacy')}}">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('terms')}}">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-glass-stroke py-6 text-center text-on-surface-variant text-sm">
+            © 2026 MSOLID TECH SOLUTIONS. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Mobile Nav Toggle
+        const openNavBtn = document.getElementById('open-nav');
+        const closeNavBtn = document.getElementById('close-nav');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        openNavBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('-translate-x-full');
+        });
+
+        closeNavBtn.addEventListener('click', () => {
+            mobileNav.classList.add('-translate-x-full');
+        });
+
+        // Portfolio Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        const portfolioGrid = document.getElementById('portfolio-grid');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Filter logic
+                projectItems.forEach(item => {
+                    const categories = item.getAttribute('data-category').split(' ');
+                    
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        item.classList.remove('hidden-item');
+                        item.style.position = 'relative';
+                    } else {
+                        item.classList.add('hidden-item');
+                        setTimeout(() => {
+                            if(item.classList.contains('hidden-item')) {
+                                item.style.position = 'absolute';
+                            }
+                        }, 500); // Wait for transition to complete
+                    }
+                });
+            });
+        });
+    </script>
+</body></html>

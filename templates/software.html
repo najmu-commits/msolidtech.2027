@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development | MSOLID TECH SOLUTIONS</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f5f7fa;
+            color:#333;
+            line-height:1.7;
+        }
+
+        header{
+            background:#011027;
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 60px;
+            position:sticky;
+            top:0;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-weight:bold;
+            transition:.3s;
+        }
+
+        nav a:hover{
+            color:#FFD54F;
+        }
+
+        .hero{
+            height:60vh;
+            background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+            url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+        }
+
+        .hero h1{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:22px;
+            max-width:800px;
+            margin:auto;
+        }
+
+        section{
+            width:90%;
+            max-width:1200px;
+            margin:70px auto;
+        }
+
+        section h2{
+            color:#010c1b;
+            margin-bottom:20px;
+            font-size:36px;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-top:35px;
+        }
+
+        .card{
+            background:white;
+            border-radius:15px;
+            padding:30px;
+            box-shadow:0 8px 20px rgba(0,0,0,.1);
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card h3{
+            color:#010b1b;
+            margin-bottom:15px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:30px;
+            padding:15px 35px;
+            background:#010d1f;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#1565c0;
+        }
+
+        footer{
+            background:#010e22;
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="logo">
+MSOLID TECH SOLUTIONS
+</div>
+</header>
+<nav style="background-color: #010b1b;">
+    <a href="{{url_for('home')}}">Home</a>
+    <a href="{{url_for('About')}}">About</a>
+    <a href="{{url_for('Service')}}">Services</a>
+    <a href="{{url_for('contact')}}">Contact</a>
+    </nav>
+<section class="hero">
+<div>
+<h1>Software Development</h1>
+<p>
+We design, develop, and maintain secure, scalable, and high-performance software solutions that help businesses succeed in the digital world.
+</p>
+</div>
+</section>
+<section>
+<h2>What is Software Development?</h2>
+<p>
+Software development is the process of designing, building, testing, deploying, and maintaining software applications. At MSOLID TECH SOLUTIONS, we create innovative software tailored to the needs of businesses, organizations, and individuals.
+</p>
+</section>
+<section>
+<h2>Our Software Development Services</h2>
+<div class="grid">
+<div class="card">
+<h3>🌐 Website Development</h3>
+<p>
+Professional company websites, e-commerce platforms, blogs, and custom web portals built with modern technologies.
+</p>
+</div>
+<div class="card">
+<h3>💻 Web Applications</h3>
+<p>
+Interactive business systems including inventory systems, hospital management systems, school management systems, and CRM solutions.
+</p>
+</div>
+<div class="card">
+<h3>📱 Mobile Applications</h3>
+<p>
+Android and cross-platform mobile applications designed for performance, security, and ease of use.
+</p>
+</div>
+<div class="card">
+<h3>🖥 Desktop Applications</h3>
+<p>
+Powerful desktop software for Windows, Linux, and macOS to automate business operations.
+</p>
+</div>
+<div class="card">
+<h3>☁ Cloud Solutions</h3>
+<p>
+Deploy applications to cloud platforms with reliable hosting, backups, and scalability.
+</p>
+</div>
+<div class="card">
+<h3>🔗 API Development</h3>
+<p>
+Build secure REST APIs to connect websites, mobile apps, and third-party services efficiently.
+</p>
+</div>
+</div>
+</section>
+<section>
+<h2>Technologies We Use</h2>
+<div class="grid">
+<div class="card">Python</div>
+<div class="card">Flask</div>
+<div class="card">Django</div>
+<div class="card">HTML5</div>
+<div class="card">CSS3</div>
+<div class="card">JavaScript</div>
+<div class="card">React</div>
+<div class="card">SQL Databases</div>
+<div class="card">Git & GitHub</div>
+<div class="card">Docker</div>
+</div>
+</section>
+<section>
+<h2>Why Choose MSOLID TECH SOLUTIONS?</h2>
+<ul style="margin-left:25px;font-size:18px;line-height:2;">
+<li>✔ Experienced Software Engineers</li>
+<li>✔ Modern Development Technologies</li>
+<li>✔ Secure Coding Practices</li>
+<li>✔ Responsive User Interfaces</li>
+<li>✔ Scalable Business Solutions</li>
+<li>✔ Ongoing Technical Support</li>
+<li>✔ Affordable Pricing</li>
+<li>✔ High Quality Software</li>
+</ul>
+<a href="{{url_for('contact')}}" class="btn">
+Request a Software Consultation
+</a>
+</section>
+<footer>
+<h2>MSOLID TECH SOLUTIONS</h2>
+<p>
+Building Reliable Software for a Smarter Future.
+</p>
+<br>
+<p>
+© 2026 MSOLID TECH SOLUTIONS. All Rights Reserved.
+</p>
+</footer>
+</body>
+</html>

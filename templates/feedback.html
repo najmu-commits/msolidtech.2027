@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback</title>
+<style>
+table{
+width:90%;
+margin:auto;
+border-collapse:collapse;
+}
+
+th,td{
+padding:12px;
+border:1px solid #ccc;
+}
+
+th{
+background:#011027;
+color:white;
+}
+
+h1{
+text-align:center;
+}
+
+</style>
+</head>
+<body>
+<h1>Customer Feedback</h1>
+<table>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Message</th>
+</tr>
+{% for row in feedbacks %}
+<tr>
+<td>{{ row[0] }}</td>
+<td>{{ row[1] }}</td>
+<td>{{ row[2] }}</td>
+<td>{{ row[3] }}</td>
+<td>{{ row[4] }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

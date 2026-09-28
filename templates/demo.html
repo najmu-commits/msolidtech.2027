@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - MSOLID TECH SOLUTIONS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..900&amp;family=Inter:wght@400..700&amp;family=JetBrains+Mono:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#004e5a",
+                      "on-secondary": "#1d00a5",
+                      "cyber-cyan": "#06B6D4",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed": "#a2eeff",
+                      "on-background": "#dae2fd",
+                      "surface-container": "#171f33",
+                      "glass-stroke": "rgba(255, 255, 255, 0.1)",
+                      "primary-container": "#29a195",
+                      "surface-variant": "#2d3449",
+                      "secondary-container": "#3626ce",
+                      "secondary-fixed-dim": "#c3c0ff",
+                      "surface-bright": "#31394d",
+                      "background": "#0b1326",
+                      "on-secondary-container": "#b3b1ff",
+                      "outline": "#879391",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary": "#00363e",
+                      "inverse-primary": "#006a61",
+                      "on-tertiary-container": "#002f36",
+                      "error-container": "#93000a",
+                      "on-secondary-fixed": "#0f0069",
+                      "on-primary-fixed-variant": "#005049",
+                      "on-surface": "#dae2fd",
+                      "surface-dim": "#0b1326",
+                      "tertiary-container": "#009fb4",
+                      "on-primary-fixed": "#00201d",
+                      "surface-container-low": "#131b2e",
+                      "primary-fixed": "#89f5e7",
+                      "on-surface-variant": "#bcc9c6",
+                      "surface-container-lowest": "#060e20",
+                      "on-tertiary-fixed": "#001f25",
+                      "primary-fixed-dim": "#6bd8cb",
+                      "tertiary-fixed-dim": "#2fd9f4",
+                      "on-primary": "#003732",
+                      "outline-variant": "#3d4947",
+                      "surface": "#0b1326",
+                      "on-secondary-fixed-variant": "#3323cc",
+                      "secondary": "#c3c0ff",
+                      "inverse-surface": "#dae2fd",
+                      "surface-container-highest": "#2d3449",
+                      "indigo-glow": "#6366F1",
+                      "professional-blue": "#1E293B",
+                      "surface-container-high": "#222a3d",
+                      "on-error": "#690005",
+                      "deep-teal": "#0F766E",
+                      "secondary-fixed": "#e2dfff",
+                      "inverse-on-surface": "#283044",
+                      "surface-tint": "#6bd8cb",
+                      "on-primary-container": "#00302b",
+                      "tertiary": "#2fd9f4",
+                      "primary": "#6bd8cb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-desktop": "80px",
+                      "max-width": "1440px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Geist"
+                      ],
+                      "label-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+      </script>
+<style>
+        .glass-card {
+            background: rgba(45, 52, 73, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #6bd8cb, #2fd9f4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-sm border-b border-glass-stroke">
+<div class="flex justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="font-headline-lg text-headline-lg-mobile font-bold tracking-tighter text-primary dark:text-primary-fixed">
+                MSOLID TECH SOLUTIONS
+            </div>
+<nav class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95 hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-lg" href="#">Home</a>
+<a class="text-primary dark:text-tertiary font-bold border-b-2 border-primary cursor-pointer active:scale-95 hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-t-lg" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95 hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-lg" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95 hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-lg" href="#">Portfolio</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95 hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-lg" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<button class="md:hidden text-on-surface-variant" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Mobile) -->
+<aside class="bg-surface dark:bg-surface-container-high fixed inset-y-0 left-0 w-64 transform -translate-x-full md:hidden border-r border-outline-variant shadow-xl transition-transform duration-300 ease-in-out z-50 flex flex-col h-full p-unit" id="mobile-menu">
+<div class="p-4 border-b border-outline-variant mb-4">
+<div class="font-headline-lg-mobile text-primary mb-1">MSOLID TECH</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">Solutions for Tomorrow</div>
+</div>
+<nav class="flex-1 space-y-2 px-2 font-label-sm text-label-sm">
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">home</span>
+                Home
+            </a>
+<a class="bg-primary-container text-on-primary-container rounded-lg px-4 py-3 flex items-center gap-3 transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">info</span>
+                About
+            </a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">settings_suggest</span>
+                Services
+            </a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">work</span>
+                Portfolio
+            </a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-transform duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">mail</span>
+                Contact
+            </a>
+</nav>
+<div class="mt-auto p-4">
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-lg hover:bg-primary-fixed transition-colors">
+                Get Started
+            </button>
+</div>
+</aside>
+<main class="flex-1 pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto w-full">
+<!-- Hero Section -->
+<section class="mb-24 text-center">
+<h1 class="font-display-lg text-display-lg md:text-[80px] mb-6 gradient-text">Pioneering the Future<br/>of Technology</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg">We are an elite collective of engineers, designers, and strategists dedicated to building secure, scalable, and sophisticated enterprise software solutions.</p>
+</section>
+<!-- Bento Grid: Who We Are, Mission, Vision -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-24">
+<div class="glass-card p-8 rounded-xl md:col-span-2 group hover:border-secondary transition-colors duration-300 relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-500"></div>
+<div class="flex items-center gap-4 mb-6 relative z-10">
+<span class="material-symbols-outlined text-4xl text-primary">groups</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Who We Are</h2>
+</div>
+<p class="text-on-surface-variant leading-relaxed relative z-10">MSOLID TECH SOLUTIONS is a forward-thinking technology firm specializing in delivering robust, innovative, and secure digital platforms. Born from a vision to bridge the gap between complex enterprise needs and elegant technological execution, we architect systems that empower organizations to lead in their respective industries.</p>
+</div>
+<div class="flex flex-col gap-gutter md:col-span-1">
+<div class="glass-card p-6 rounded-xl flex-1 group hover:border-tertiary transition-colors duration-300">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-2xl text-tertiary">rocket_launch</span>
+<h3 class="font-bold text-xl text-on-background">Our Mission</h3>
+</div>
+<p class="text-on-surface-variant text-sm">To architect and deliver uncompromisingly secure, intelligent, and scalable software solutions that drive operational excellence and propel businesses into the future.</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex-1 group hover:border-secondary transition-colors duration-300">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-2xl text-secondary">visibility</span>
+<h3 class="font-bold text-xl text-on-background">Our Vision</h3>
+</div>
+<p class="text-on-surface-variant text-sm">To be the undisputed global benchmark in advanced enterprise technology integration, setting the standard for innovation, security, and sophisticated design.</p>
+</div>
+</div>
+</section>
+<!-- Core Values -->
+<section class="mb-24">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center mb-12">Core Values</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<!-- Value 1 -->
+<div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 block">lightbulb</span>
+<h4 class="font-bold text-lg mb-2">Innovation</h4>
+<p class="text-xs text-on-surface-variant">Pushing boundaries to create unprecedented technological solutions.</p>
+</div>
+<!-- Value 2 -->
+<div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block">verified_user</span>
+<h4 class="font-bold text-lg mb-2">Integrity</h4>
+<p class="text-xs text-on-surface-variant">Unyielding commitment to ethical practices and transparent communication.</p>
+</div>
+<!-- Value 3 -->
+<div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-4 block">workspace_premium</span>
+<h4 class="font-bold text-lg mb-2">Excellence</h4>
+<p class="text-xs text-on-surface-variant">Delivering flawless execution and uncompromising quality in every project.</p>
+</div>
+<!-- Value 4 -->
+<div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-primary-fixed mb-4 block">sentiment_satisfied_alt</span>
+<h4 class="font-bold text-lg mb-2">Customer Satisfaction</h4>
+<p class="text-xs text-on-surface-variant">Prioritizing client success as the ultimate measure of our achievement.</p>
+</div>
+<!-- Value 5 -->
+<div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-error mb-4 block">security</span>
+<h4 class="font-bold text-lg mb-2">Security</h4>
+<p class="text-xs text-on-surface-variant">Embedding robust protection into the DNA of every system we design.</p>
+</div>
+<!-- Value 6 -->
+<div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-cyber-cyan mb-4 block">model_training</span>
+<h4 class="font-bold text-lg mb-2">Continuous Learning</h4>
+<p class="text-xs text-on-surface-variant">Relentlessly pursuing knowledge to stay ahead of the technological curve.</p>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="mb-24">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Leadership &amp; Engineering</h2>
+<button class="hidden md:flex items-center gap-2 text-primary hover:text-primary-fixed transition-colors font-label-sm">
+                    View Full Directory <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Team Member 1 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 w-full relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-high/50 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105" data-alt="A striking professional portrait of a tech CEO in a modern, dimly lit high-rise office. The lighting is sophisticated, with cool blue ambient light contrasting against warm rim lighting on their face. They are wearing a sharp, dark corporate blazer. The background features subtle, out-of-focus city lights through a glass window. The mood is confident, authoritative, and visionary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk97R8crvi5WkgXYGy--l27DndxMpoe95nCQfzL2xPk6-hD2r2bG2s9kbXiU1Jw2wb_rjU4PAc3PCjeY1Q4WHOtPsCPCPaG3RHeP7K0N5Quz7X0BmIqUJ5OUuS0-AdHUqOJZKrDD7RZCjrCmSF9MFHgrX1btuQPn9XDGV6tvulU_ZKyqTKewuZK-nVhRlJW5sRNOQIND_s1cH3GJNqKyj3l33ovSaiuyWlOiDSKMlVn44zbbelopba"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg text-on-background">Eleanor Vance</h4>
+<p class="text-sm font-label-sm text-primary mb-4">Founder &amp; CEO</p>
+<div class="flex gap-3">
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">language</span></a>
+</div>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 w-full relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-high/50 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105" data-alt="A focused AI Engineer working in a high-tech laboratory setting. They are looking thoughtfully slightly off-camera. The environment is illuminated by the soft, cyan glow of multiple monitors displaying complex data visualizations and code. The aesthetic is highly technical, pristine, and cutting-edge, emphasizing intelligence and deep focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtn_Afknr80EqAgBH2FqUaBJ2eoOrExoYIjpJtrZpwWvw6uT7SJeBtdHK4yGvZruZ91IkY06bGBvAIZ0hOccXbMSngcONDZ5wtnds_KDFA0VKGJo-wxie9_V_fpE-f1UHBrdSXgnYZwVkdkV5Gj1ivaj4lim_s0ATMOMMO1W5sxolAIVoZfzEAHzn-DiqeQDmoss1fh337cRqKb_Ek2_rSQMAEqsqk09JkvE57NpMjm8dXguDpBHj7"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg text-on-background">Dr. Julian Thorne</h4>
+<p class="text-sm font-label-sm text-tertiary mb-4">Lead AI Engineer</p>
+<div class="flex gap-3">
+<a class="text-on-surface-variant hover:text-tertiary" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+<a class="text-on-surface-variant hover:text-tertiary" href="#"><span class="material-symbols-outlined text-lg">code</span></a>
+</div>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 w-full relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-high/50 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105" data-alt="A dynamic portrait of a Software Developer in a modern open-plan tech office. The lighting is bright and clean, reflecting a professional light-mode aesthetic despite the overall dark theme of the UI. They are standing near a glass white-board filled with architectural diagrams. The mood is collaborative, energetic, and highly skilled." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6DQAqTMEGlHkoUbggeyGUyj3WpNOrMZBbbyGq6Lmbxwt2wjyqcbznaRnfGmIWu8pVLixvxIIYDPujZeacXGc4cmO0rncyLymhXcOLUSoOd8Acd-EAWkHp89y1TqDPuXXABk9WTrVqDGmgvaC-qMAmQP_dS4nA1TovONX1ni-l76h-iK5GK-bHTSzkLZiJu1aKlz9_8UHkTy30UiRR02YgHqwaG81WtuyYPgSSrtwlNF7zTfo7oSzk"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg text-on-background">Marcus Chen</h4>
+<p class="text-sm font-label-sm text-secondary mb-4">Senior Software Developer</p>
+<div class="flex gap-3">
+<a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+<a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined text-lg">terminal</span></a>
+</div>
+</div>
+</div>
+<!-- Team Member 4 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 w-full relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-high/50 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105" data-alt="A dramatic portrait of a Cyber Security Specialist in a dark, secure server room environment. The subject is partially illuminated by striking neon green and red status lights from server racks. The aesthetic conveys intense vigilance, impenetrable security, and elite technical prowess. The background is a blur of technological hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdbm_1VhMa9RuoSOgXqpjO0INHkGuwLqlZP1_23Qb90YQXCFUz55V-tOap61F20BuCx6NNRQTCZdhJhe8EcutmqVcE1yV-e7n4x53b5b4_Y7tswucqwIv7oojN77n6WBpUFOvoI-5uwPgnuR_-bJKSnzhXY6Sz28ewMEwaH8WrUml1AxO2U4VFBIA4wF_8Uoug_o--qu1GSOc92bxCnK2hdKn8DXElrQ312Z5cSru5JHVhA_1xccQP"/>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg text-on-background">Sarah Jenkins</h4>
+<p class="text-sm font-label-sm text-error mb-4">Cyber Security Specialist</p>
+<div class="flex gap-3">
+<a class="text-on-surface-variant hover:text-error" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+<a class="text-on-surface-variant hover:text-error" href="#"><span class="material-symbols-outlined text-lg">security</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-3xl mx-auto">
+<div class="text-center mb-12">
+<span class="font-label-sm text-primary tracking-widest uppercase mb-2 block">Knowledge Base</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<!-- FAQ Items -->
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center border-b border-glass-stroke/0 hover:bg-white/5 transition-colors">
+<h4 class="font-medium">What is your typical project timeline?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">Project timelines vary significantly based on complexity and scope. An initial enterprise architecture phase typically takes 3-4 weeks, followed by development sprints. We prioritize agile delivery to ensure rapid value realization.</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">How do you ensure data security?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">Security is integrated at the foundational level. We employ zero-trust architectures, end-to-end encryption (AES-256), continuous vulnerability scanning, and comply with strict international standards (ISO 27001, SOC2).</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">Do you provide ongoing maintenance and support?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">Yes. We offer tiered SLA (Service Level Agreement) packages that include 24/7 monitoring, automated patch management, and dedicated engineering support to ensure optimal system performance post-deployment.</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">What technologies do you specialize in?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">Our stack is modern and highly scalable. We specialize in Python (Django/Flask), Node.js, React/Vue for frontend, Docker/Kubernetes for containerization, and major cloud providers (AWS, GCP, Azure).</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">How do you handle cloud migration?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">We use a phased approach starting with a comprehensive audit of existing on-premise infrastructure. We then design a tailored migration strategy focusing on minimal downtime, utilizing tools like Terraform for infrastructure as code.</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">Can you integrate AI into our existing platforms?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">Absolutely. Our AI engineers can deploy custom machine learning models, NLP interfaces, and predictive analytics tools via robust APIs, seamlessly enhancing your current software ecosystem without requiring a complete rebuild.</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">What is your approach to UI/UX design?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">We believe enterprise software should be as intuitive as consumer apps. We employ user-centric design methodologies, focusing on dark-mode optimized aesthetics, glassmorphic elements, and fluid typography to create engaging, low-fatigue interfaces.</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">Do you offer white-label solutions?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">Yes, many of our platforms are architected to be fully brandable by our clients. This includes custom theming engines and localized domain configurations for seamless B2B2C deployments.</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">How is project intellectual property handled?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">Upon final payment, all custom code, architectural designs, and intellectual property developed specifically for your project are fully transferred to your organization, guaranteed by our standard MSAs.</p>
+</div>
+</div>
+<div class="faq-item glass-card rounded-xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-5 flex justify-between items-center hover:bg-white/5 transition-colors">
+<h4 class="font-medium">How do we initiate a partnership?</h4>
+<span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+</div>
+<div class="faq-answer px-5">
+<p class="py-4 text-on-surface-variant text-sm border-t border-glass-stroke">The first step is a technical discovery call with our lead architects. Contact us via our secure portal to schedule an initial consultation where we will assess your needs and propose a strategic roadmap.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full border-t border-outline-variant shadow-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-max-width mx-auto py-margin-desktop px-margin-mobile md:px-margin-desktop">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="font-headline-lg text-primary text-2xl font-bold">MSOLID TECH</div>
+<p class="text-sm text-on-surface-variant">Pioneering secure, scalable, and sophisticated enterprise software solutions for tomorrow's industry leaders.</p>
+</div>
+<div class="col-span-1 md:col-span-2 grid grid-cols-2 gap-8 md:px-12">
+<div>
+<h5 class="text-on-surface font-bold mb-4">Company</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-on-surface font-bold mb-4">Navigation</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Quick Links</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Our Services</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 flex flex-col items-start md:items-end justify-between">
+<div class="flex gap-4 mb-4">
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+<p class="text-xs text-on-surface-variant font-label-sm">© 2024 MSOLID TECH SOLUTIONS. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('-translate-x-full')) {
+                menu.classList.remove('-translate-x-full');
+            } else {
+                menu.classList.add('-translate-x-full');
+            }
+        });
+    </script>
+</body></html>

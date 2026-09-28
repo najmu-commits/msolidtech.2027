@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - MSOLID TECH SOLUTIONS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/MSOLIDLOGO.jpeg') }}">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004e5a",
+                        "on-secondary": "#1d00a5",
+                        "cyber-cyan": "#06B6D4",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#a2eeff",
+                        "on-background": "#dae2fd",
+                        "surface-container": "#171f33",
+                        "glass-stroke": "rgba(255, 255, 255, 0.1)",
+                        "primary-container": "#29a195",
+                        "surface-variant": "#2d3449",
+                        "secondary-container": "#3626ce",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "surface-bright": "#31394d",
+                        "background": "#0b1326",
+                        "on-secondary-container": "#b3b1ff",
+                        "outline": "#879391",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#00363e",
+                        "inverse-primary": "#006a61",
+                        "on-tertiary-container": "#002f36",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#0f0069",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-surface": "#dae2fd",
+                        "surface-dim": "#0b1326",
+                        "tertiary-container": "#009fb4",
+                        "on-primary-fixed": "#00201d",
+                        "surface-container-low": "#131b2e",
+                        "primary-fixed": "#89f5e7",
+                        "on-surface-variant": "#bcc9c6",
+                        "surface-container-lowest": "#060e20",
+                        "on-tertiary-fixed": "#001f25",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "tertiary-fixed-dim": "#2fd9f4",
+                        "on-primary": "#003732",
+                        "outline-variant": "#3d4947",
+                        "surface": "#0b1326",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "secondary": "#c3c0ff",
+                        "inverse-surface": "#dae2fd",
+                        "surface-container-highest": "#2d3449",
+                        "indigo-glow": "#6366F1",
+                        "professional-blue": "#1E293B",
+                        "surface-container-high": "#222a3d",
+                        "on-error": "#690005",
+                        "deep-teal": "#0F766E",
+                        "secondary-fixed": "#e2dfff",
+                        "inverse-on-surface": "#283044",
+                        "surface-tint": "#6bd8cb",
+                        "on-primary-container": "#00302b",
+                        "tertiary": "#2fd9f4",
+                        "primary": "#6bd8cb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "max-width": "1440px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Geist"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(11, 19, 38, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .card-hover-lift {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px -12px rgba(107, 216, 203, 0.15);
+            border-color: rgba(107, 216, 203, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #6bd8cb, #2fd9f4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle glowing background orbs */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Mobile navigation fix */
+        #mobile-menu-btn {
+            display: none;
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            color: #dae2fd;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            z-index: 60;
+        }
+
+        #mobile-menu-btn .material-symbols-outlined {
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        @media (max-width: 767px) {
+            #mobile-menu-btn {
+                display: flex !important;
+            }
+
+            nav.fixed > div {
+                min-width: 0;
+            }
+
+            nav.fixed > div > div:first-child {
+                min-width: 0;
+                max-width: calc(100% - 56px);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #mobile-menu-btn {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-b border-glass-stroke shadow-sm">
+<div class="flex justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<!-- Brand -->
+<div class="font-headline-lg-mobile md:font-headline-lg text-primary dark:text-primary-fixed tracking-tighter flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="memory" style="font-variation-settings: 'FILL' 1;">memory</span>
+                MSOLID TECH SOLUTIONS
+            </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-md cursor-pointer active:scale-95" href="{{url_for('home')}}">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-md cursor-pointer active:scale-95" href="{{url_for('About')}}">About</a>
+<a class="text-primary dark:text-tertiary font-bold border-b-2 border-primary hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-md cursor-pointer active:scale-95" href="{{url_for('Service')}}">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-md cursor-pointer active:scale-95" href="{{url_for('Portfolio')}}">Portfolio</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-md cursor-pointer active:scale-95" href="{{url_for('contact')}}">Contact</a>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="dark_mode">dark_mode</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button type="button" class="md:hidden text-on-surface-variant p-2" id="mobile-menu-btn" aria-label="Open navigation menu" aria-controls="mobile-nav" aria-expanded="false">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Side Nav (Hidden by default, simplistic implementation for structural completeness) -->
+<aside class="fixed inset-y-0 left-0 w-64 transform -translate-x-full md:hidden bg-surface dark:bg-surface-container-high border-r border-outline-variant shadow-xl transition-transform duration-300 ease-in-out z-50 flex flex-col p-unit" id="mobile-nav">
+<div class="flex justify-between items-center mb-8 px-4 pt-4">
+<span class="font-headline-lg-mobile text-primary tracking-tighter">MSOLID TECH</span>
+<button class="text-on-surface-variant" id="mobile-close-btn">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<p class="font-label-sm text-on-surface-variant px-4 mb-6">Solutions for Tomorrow</p>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg" href="{{ url_for('home') }}">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Home
+            </a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg" href="{{ url_for('About') }}">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+                About
+            </a>
+<a class="bg-primary-container text-on-primary-container rounded-lg px-4 py-3 flex items-center gap-3" href="{{ url_for('Service') }}">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+                Services
+            </a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg" href="{{ url_for('Portfolio') }}">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+                Portfolio
+            </a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg" href="{{ url_for('contact') }}">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                Contact
+            </a>
+</nav>
+<button class="mt-auto bg-primary text-on-primary font-label-sm py-3 rounded-lg hover:bg-primary-fixed transition-colors">
+            Get Started
+        </button>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow pt-32 pb-24 relative z-10">
+<!-- Ambient Background Orbs -->
+<div class="glow-orb bg-primary w-[600px] h-[600px] top-[-100px] right-[-200px]"></div>
+<div class="glow-orb bg-secondary-container w-[500px] h-[500px] bottom-[20%] left-[-150px]"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<!-- Header Section -->
+<header class="text-center mb-20 animate-on-scroll">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg mb-6">
+                    Our <span class="gradient-text">Services</span>
+</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg">
+                    Empowering enterprises with cutting-edge solutions built on the pillars of Innovation, Security, and Sophistication. We transform complex challenges into scalable realities.
+                </p>
+</header>
+<!-- Bento Grid / Services Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Service 1: Artificial Intelligence (Large Featured Card) -->
+<article class="lg:col-span-12 glass-panel rounded-2xl overflow-hidden card-hover-lift animate-on-scroll relative group">
+<div class="grid md:grid-cols-2 gap-0 h-full">
+<div class="p-8 md:p-12 flex flex-col justify-center">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high border border-glass-stroke flex items-center justify-center mb-6 text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<h2 class="font-headline-lg text-3xl md:text-4xl mb-4 text-on-surface">Artificial Intelligence</h2>
+<p class="text-on-surface-variant mb-8 line-clamp-3">
+                                Leverage the power of advanced machine learning models and generative AI to automate complex processes, extract deep insights from your data, and create adaptive systems that evolve with your enterprise needs.
+                            </p>
+<ul class="space-y-3 mb-8 font-label-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                    Machine Learning Models
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                    Natural Language Processing (NLP)
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                    Predictive Analytics
+                                </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
+                                    Computer Vision Solutions
+                                </li>
+</ul>
+<div class="mt-auto">
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-indigo-glow to-cyber-cyan text-white font-label-sm hover:opacity-90 transition-opacity" href="{{url_for('ai')}}">
+                                    Learn More <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative h-64 md:h-auto overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-background to-transparent z-10 w-full h-full opacity-60"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A highly detailed visualization of artificial intelligence concept. Glowing digital neural network pathways connecting over a dark, sleek metallic server chassis. The lighting is moody with bright cyber-cyan and indigo highlights representing data flow. The aesthetic is extremely modern, sophisticated, and high-tech corporate, emphasizing advanced capability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDutpkchYnJ42RcFLXdP72WVikMTu02pdWUACSvAII5QtaweiPR6IT6Ct5mlpuF1eCGEnJvfWmy2SzUY1KYcbhJfVCRYNQuazzwRJS3MUKeiU5-c8MwdRXt9rmDOt84qWHrPmqalA6N1VujXP57dFCTobAaTirwlwPsaxnPmpjRyr6G6I7SAS3VS0UGPI7mRBJJtQ89xgvXKnAv8xKyx2rrzT3pQI4Cp2GfXLqI3uxbh6STgRz_MxEP"/>
+</div>
+</div>
+</article>
+<!-- Service 2: Software Development -->
+<article class="lg:col-span-6 glass-panel rounded-2xl p-8 flex flex-col card-hover-lift animate-on-scroll">
+<div class="relative h-48 w-full rounded-xl overflow-hidden mb-6 border border-glass-stroke">
+<img class="w-full h-full object-cover" data-alt="A modern software development environment scene. Multiple dark-mode monitors displaying complex lines of code and architectural diagrams. The desk is minimalist, bathed in soft, cool blue and teal ambient lighting. The atmosphere suggests intense focus, precision engineering, and professional enterprise development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXUVwKYacpkFwd6KWBbPZMxzJQ_uPZI8wGEwcotWZCLLahvJsFYVC2423uTKBgIvk99AkmOKyM6zSStq3gyZxPolk6aNdPseLPHZZU_MokQog28NWtJyj0AGMCZ-qzdzyRAqkwp9Rx3iQ0dnVHAa86Pvq8XsOPMp8c43DARbWyRs7Zhc2oXCtmrdPvsei1EJm1OTIDykkbthtsS1AzJoog30jCcq4zrA7K-K2Mn9swtlBwImCsB7j0"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container border border-glass-stroke flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="code_blocks" style="font-variation-settings: 'FILL' 1;">code_blocks</span>
+</div>
+<h2 class="font-headline-lg text-2xl">Software Development</h2>
+</div>
+<p class="text-on-surface-variant mb-6 flex-grow">
+                        End-to-end bespoke software engineering. We build robust, scalable, and high-performance applications tailored to streamline your specific business operations and drive digital transformation.
+                    </p>
+<ul class="space-y-2 mb-6 font-label-sm text-on-surface-variant border-t border-glass-stroke pt-4">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="terminal">terminal</span> Custom Web Applications</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="smartphone">smartphone</span> Mobile App Development</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="api">api</span> API Integration &amp; Microservices</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="cloud">cloud</span> Cloud-Native Architecture</li>
+</ul>
+<a class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-deep-teal text-primary hover:bg-deep-teal/10 font-label-sm transition-colors mt-auto w-full" href="{{url_for('software')}}">
+                        Explore Development
+                    </a>
+</article>
+<!-- Service 3: Cyber Security -->
+<article class="lg:col-span-6 glass-panel rounded-2xl p-8 flex flex-col card-hover-lift animate-on-scroll">
+<div class="relative h-48 w-full rounded-xl overflow-hidden mb-6 border border-glass-stroke">
+<img class="w-full h-full object-cover" data-alt="A dramatic conceptual representation of cyber security. A glowing digital shield or padlock hovering in a dark, grid-like virtual space. Red and blue laser lines represent threat detection and network defense. The aesthetic is highly secure, intense, and corporate, emphasizing impregnable digital infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDVGg8djWzHNnSVmKFdfSczdN_VoWPjNLG2kiirP1YTNqOCVAhsg4KUlXTUv0YTq2lr2txT_2xrZNmIONC3X0ZYI9YqvUvGgopkGfMxBBJoekCeSnAj9f6vzzl3jNeBk2hJ61ZvbHoGONzI5u7N184JgJX0vTOoTjEq20mymc6J56-JsX_8SW8HkSkb4oVvsGekTszuTFMmuBZPjntvJALa6Q9HzgsNVFiQZ0fI6CZy2lmNxrAsruh"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container border border-glass-stroke flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="security" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<h2 class="font-headline-lg text-2xl">Cyber Security</h2>
+</div>
+<p class="text-on-surface-variant mb-6 flex-grow">
+                        Ironclad protection for your digital assets. We employ military-grade security protocols, continuous monitoring, and proactive threat hunting to safeguard your enterprise against evolving sophisticated cyber threats.
+                    </p>
+<ul class="space-y-2 mb-6 font-label-sm text-on-surface-variant border-t border-glass-stroke pt-4">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm" data-icon="bug_report">bug_report</span> Ethical Hacking &amp; Penetration Testing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm" data-icon="gpp_good">gpp_good</span> Security Audits &amp; Compliance</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm" data-icon="admin_panel_settings">admin_panel_settings</span> Incident Response &amp; Recovery</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm" data-icon="lock">lock</span> Data Encryption Solutions</li>
+</ul>
+<a class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-deep-teal text-primary hover:bg-deep-teal/10 font-label-sm transition-colors mt-auto w-full" href="{{url_for('cyber')}}">
+                        Secure Your Assets
+                    </a>
+</article>
+</div>
+<!-- Call to Action Banner -->
+<div class="mt-24 rounded-2xl bg-gradient-to-br from-surface-container-high to-surface-container border border-glass-stroke p-10 md:p-16 text-center animate-on-scroll relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 pattern-dots pattern-size-4 pattern-opacity-10"></div>
+<div class="relative z-10">
+<h3 class="font-headline-lg text-3xl mb-4">Ready to elevate your infrastructure?</h3>
+<p class="text-on-surface-variant mb-8 max-w-xl mx-auto">Schedule a consultation with our senior architects to discuss how MSOLID TECH can architect your next breakthrough.</p>
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-on-primary font-bold hover:bg-primary-fixed transition-colors shadow-[0_0_20px_rgba(107,216,203,0.3)]" href="{{url_for('contact')}}">
+                        Initiate Project
+                    </a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant font-body-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-max-width mx-auto py-margin-desktop px-margin-mobile md:px-margin-desktop">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<span class="font-headline-lg text-primary tracking-tighter flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+                    MSOLID TECH
+                </span>
+<p class="text-on-surface-variant text-sm">Advanced Intelligence made tangible for the modern enterprise.</p>
+</div>
+<!-- Links Columns -->
+<div>
+<h4 class="text-on-surface font-medium mb-4">Quick Links</h4>
+<ul class="space-y-2 flex flex-col">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('home')}}">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('About')}}">About</a>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-medium mb-4">Our Services</h4>
+<ul class="space-y-2 flex flex-col">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('ai')}}">Artificial Intelligence</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('software')}}">Software Development</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('cyber')}}">Cyber Security</a>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-medium mb-4">Legal</h4>
+<ul class="space-y-2 flex flex-col">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('privacy')}}">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('terms')}}">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="{{url_for('contact')}}">Contact Us</a>
+</ul>
+</div>
+</div>
+<div class="border-t border-glass-stroke py-6 text-center text-sm text-on-surface-variant">
+            © 2026 MSOLID TECH SOLUTIONS. All rights reserved.
+        </div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileCloseBtn = document.getElementById('mobile-close-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+
+            if (mobileBtn && mobileNav) {
+                mobileBtn.addEventListener('click', () => {
+                    const isOpen = mobileNav.classList.contains('translate-x-0');
+
+                    if (isOpen) {
+                        mobileNav.classList.remove('translate-x-0');
+                        mobileNav.classList.add('-translate-x-full');
+                        mobileBtn.setAttribute('aria-expanded', 'false');
+                    } else {
+                        mobileNav.classList.remove('-translate-x-full');
+                        mobileNav.classList.add('translate-x-0');
+                        mobileBtn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+
+            if (mobileCloseBtn && mobileNav) {
+                mobileCloseBtn.addEventListener('click', () => {
+                    mobileNav.classList.remove('translate-x-0');
+                    mobileNav.classList.add('-translate-x-full');
+                    mobileBtn?.setAttribute('aria-expanded', 'false');
+                });
+            }
+        });
+    </script>
+</body></html>

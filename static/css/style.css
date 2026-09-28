@@ -1,0 +1,802 @@
+/* ===================================
+   MSOLID TECH SOLUTIONS
+   style.css
+=================================== */
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    background:#f4f7fa;
+    color:#333;
+}
+
+/* Links */
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/* Images */
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* Header */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#0d47a1;
+
+    color:white;
+
+    padding:18px 60px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+
+}
+
+/* Logo */
+
+.logo h2{
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+/* Navigation */
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+nav ul li{
+
+    display:inline-block;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+nav ul li a:hover{
+
+    color:#ffcc00;
+
+}
+
+/* Hero Section */
+
+.hero{
+
+    height:90vh;
+
+    background:linear-gradient(
+        rgba(0,0,0,.6),
+        rgba(0,0,0,.6)
+    ),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero-content{
+
+    width:80%;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    margin-bottom:40px;
+
+}
+
+/* Button */
+
+.btn{
+
+    display:inline-block;
+
+    background:#ff9800;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    background:#ff5722;
+
+    transform:scale(1.05);
+
+}
+
+/* General Sections */
+
+section{
+
+    padding:80px 10%;
+
+}
+
+/* Headings */
+
+section h2{
+
+    text-align:center;
+
+    color:#0d47a1;
+
+    margin-bottom:40px;
+
+    font-size:40px;
+
+}
+
+/* About */
+
+#about p{
+
+    font-size:20px;
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* Service Cards */
+
+.service-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    text-align:center;
+
+    color:#0d47a1;
+
+    margin:20px 0;
+
+}
+
+.card p{
+
+    padding:0 20px 30px;
+
+    text-align:center;
+
+}
+
+/* Why Choose Us */
+
+.why{
+
+    background:#e3f2fd;
+
+}
+
+.why-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    text-align:center;
+
+}
+
+.why-container div{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+
+}
+
+/* Technologies */
+
+.tech-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.tech-container div{
+
+    background:#0d47a1;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+/* Portfolio */
+
+.portfolio{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.project{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.project:hover{
+
+    transform:scale(1.05);
+
+}
+/* ===================================
+   CONTACT SECTION
+=================================== */
+
+#contact{
+    background:#eef5ff;
+}
+
+#contact p{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:10px;
+    color:#444;
+}
+
+form{
+
+    width:70%;
+    max-width:700px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+form input,
+form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+form input:focus,
+form textarea:focus{
+
+    border:2px solid #0d47a1;
+
+}
+
+form textarea{
+
+    height:160px;
+
+    resize:none;
+
+}
+
+form button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#0d47a1;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+form button:hover{
+
+    background:#1565c0;
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+
+    background:#0d47a1;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+footer h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    margin:10px 0;
+
+}
+
+/* ===================================
+   SCROLL ANIMATION
+=================================== */
+
+.card,
+.project,
+.why-container div{
+
+    transition:.4s;
+
+}
+
+.card:hover,
+.project:hover,
+.why-container div:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.2);
+
+}
+
+/* ===================================
+   BUTTON ANIMATION
+=================================== */
+
+button,
+.btn{
+
+    transition:0.4s ease;
+
+}
+
+button:hover,
+.btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0d47a1;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1565c0;
+
+}
+
+/* ===================================
+   BACK TO TOP BUTTON
+=================================== */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff9800;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+}
+
+#topBtn:hover{
+
+    background:#ff5722;
+
+}
+
+/* ===================================
+   DARK MODE
+=================================== */
+
+.dark{
+
+    background:#121212;
+
+    color:white;
+
+}
+
+.dark section{
+
+    background:#121212;
+
+    color:white;
+
+}
+
+.dark header{
+
+    background:#000;
+
+}
+
+.dark footer{
+
+    background:#000;
+
+}
+
+.dark .card,
+.dark .project,
+.dark form,
+.dark .why-container div{
+
+    background:#1e1e1e;
+
+    color:white;
+
+}
+
+.dark input,
+.dark textarea{
+
+    background:#2d2d2d;
+
+    color:white;
+
+    border:1px solid #555;
+
+}
+
+.dark h2{
+
+    color:#64b5f6;
+
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media(max-width:992px){
+
+header{
+
+    flex-direction:column;
+
+    padding:20px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    margin-top:15px;
+
+}
+
+.hero h1{
+
+    font-size:45px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+}
+
+form{
+
+    width:90%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+    height:80vh;
+
+}
+
+.hero h1{
+
+    font-size:35px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+section{
+
+    padding:60px 5%;
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+}
+
+nav ul{
+
+    gap:15px;
+
+}
+
+nav ul li a{
+
+    font-size:16px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+
+    font-size:28px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.btn{
+
+    padding:12px 25px;
+
+    font-size:16px;
+
+}
+
+section h2{
+
+    font-size:30px;
+
+}
+
+.tech-container{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+}
+
+/* ===================================
+   END OF CSS
+=================================== */

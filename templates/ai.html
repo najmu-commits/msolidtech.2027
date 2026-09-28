@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artificial Intelligence | MSOLID TECH SOLUTIONS</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+line-height:1.8;
+}
+
+header{
+background:linear-gradient(135deg,#020e22,#021529);
+color:white;
+padding:25px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+.hero{
+height:55vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h2{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:22px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:60px 0;
+}
+
+.section{
+background:white;
+margin-bottom:35px;
+padding:35px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.section h2{
+color:#010d1f;
+margin-bottom:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+background:#f8fbff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 12px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#011027;
+margin-bottom:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:#011027;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#1564be;
+}
+
+footer{
+background:#01122c;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>MSOLID TECH SOLUTIONS</h1>
+</header>
+<div style="background-color: #010d1f;">
+    <nav>
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="{{url_for('About')}}">About</a>
+        <a href="{{url_for('Service')}}">Services</a>
+        <a href="{{url_for('contact')}}">Contact</a>
+        </nav>
+</div>
+<section class="hero">
+<div>
+<h2>Artificial Intelligence</h2>
+<p>Building intelligent systems that transform businesses.</p>
+</div>
+</section>
+<div class="container">
+<div class="section">
+<h2>What is Artificial Intelligence?</h2>
+<p>
+Artificial Intelligence (AI) enables computers and software to perform tasks that normally require human intelligence. AI systems can analyze data, recognize patterns, understand language, make predictions, and automate decision-making.
+</p>
+</div>
+<div class="section">
+<h2>Our AI Integration Services</h2>
+<div class="grid">
+<div class="card">
+<h3>🤖 AI Chatbots</h3>
+<p>Create intelligent virtual assistants that answer customer questions 24/7 and improve customer engagement.</p>
+</div>
+<div class="card">
+<h3>🧠 Machine Learning</h3>
+<p>Develop models that learn from data to improve predictions, automate tasks, and support better business decisions.</p>
+</div>
+<div class="card">
+<h3>👁 Computer Vision</h3>
+<p>Build systems capable of recognizing faces, detecting objects, reading documents, and analyzing images.</p>
+</div>
+<div class="card">
+<h3>💬 Natural Language Processing</h3>
+<p>Enable computers to understand, process, and generate human language for applications like translation and sentiment analysis.</p>
+</div>
+<div class="card">
+<h3>📊 Predictive Analytics</h3>
+<p>Analyze historical data to forecast trends, customer behavior, and future business performance.</p>
+</div>
+<div class="card">
+<h3>⚙ Intelligent Automation</h3>
+<p>Automate repetitive business processes, saving time while reducing costs and human error.</p>
+</div>
+</div>
+</div>
+<div class="section">
+<h2>Industries We Serve</h2>
+<ul>
+<li>Healthcare</li>
+<li>Education</li>
+<li>Banking & Finance</li>
+<li>Retail & E-Commerce</li>
+<li>Manufacturing</li>
+<li>Agriculture</li>
+<li>Government Institutions</li>
+<li>Transportation & Logistics</li>
+</ul>
+</div>
+<div class="section">
+<h2>Why Choose MSOLID TECH SOLUTIONS?</h2>
+<ul>
+<li>✔ Experienced AI Developers</li>
+<li>✔ Secure AI Solutions</li>
+<li>✔ Modern Technologies</li>
+<li>✔ Scalable Systems</li>
+<li>✔ Affordable Pricing</li>
+<li>✔ Professional Support</li>
+<li>✔ Customized AI Solutions</li>
+<li>✔ High Performance Applications</li>
+</ul>
+</div>
+<div class="section">
+<h2>Technologies We Use</h2>
+<p>
+Python • TensorFlow • PyTorch • Scikit-learn • OpenCV • Hugging Face • Flask • FastAPI • Docker • SQL • REST APIs
+</p>
+<a href="{{url_for('contact')}}" class="btn">
+Request AI Consultation
+</a>
+</div>
+</div>
+<footer>
+<h3>MSOLID TECH SOLUTIONS</h3>
+<p>Empowering Businesses Through Artificial Intelligence.</p>
+<p>© 2026 MSOLID TECH SOLUTIONS. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
